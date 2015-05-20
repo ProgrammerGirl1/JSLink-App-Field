@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100126CDB91447B4E7AAF77BDC76D88889D" Name="Customer" Group="Custom Content Types" Description="Information about customer" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{6cc7b2df-d846-4627-b2cb-a3ffdeabe59c}" DisplayName="Customer Name" Required="TRUE" Name="CustomerName" />
+      <FieldRef ID="{e03c1e86-3e36-4683-9d55-eb9a6c0b9dfe}" DisplayName="Customer Comments" Required="FALSE" Description="Any comments for this customer" Name="CustomerComments" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

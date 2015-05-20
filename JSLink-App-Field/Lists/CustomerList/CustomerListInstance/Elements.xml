@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Customers" OnQuickLaunch="TRUE" TemplateType="10100" Url="Lists/Customers" Description="Customer details">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">AM1982</Field>
+          <Field Name="CustomerName">Amity Toys Ltd</Field>
+          <Field Name="CustomerComments">Sells all types of toys</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">MO3456</Field>
+          <Field Name="CustomerName">Motor Toys R Us</Field>
+          <Field Name="CustomerComments">Sells model cars, vans, etc. including radio controlled</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">DO2571</Field>
+          <Field Name="CustomerName">Dolls and Dollhouses</Field>
+          <Field Name="CustomerComments">Sells dollhouses and accessories</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">KI9820</Field>
+          <Field Name="CustomerName">Kites and More</Field>
+          <Field Name="CustomerComments">Sells kites of all shapes and sizes</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">KI2345</Field>
+          <Field Name="CustomerName">Kid Stuff</Field>
+          <Field Name="CustomerComments">Sells all types of toys</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">DO9124</Field>
+          <Field Name="CustomerName">DollMania</Field>
+          <Field Name="CustomerComments">Sells all types of dolls, such as Barbie, talking dolls, etc.</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

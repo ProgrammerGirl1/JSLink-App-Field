@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Customer Orders" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Customer Orders" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" Type="10200">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100BDE22685379A4A9E9E1FCAF1F785B6F7" Name="CustomerOrders" Group="Custom Content Types" Description="Information about customer orders" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{5a67fdcf-7cb5-4983-92df-c47828479edf}" DisplayName="Customer Name" Required="TRUE" Description="The customer this relates to" Name="CustomerNameLookup" />
+          <FieldRef ID="{252ff704-f04c-44cc-a5b4-c2f2c4324841}" DisplayName="Order No." Required="FALSE" Description="Order Number for this order" Name="OrderNumber" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Order Description" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field ID="{5a67fdcf-7cb5-4983-92df-c47828479edf}" Name="CustomerNameLookup" DisplayName="Customer Name" Type="Text" Required="TRUE" Group="Custom Site Columns" Description="The customer this relates to" JSLink="~site/Scripts/lookupfieldcustomer.js">
+        <Validation Message="Please select a customer"></Validation>
+      </Field>
+      <Field ID="{252ff704-f04c-44cc-a5b4-c2f2c4324841}" Name="OrderNumber" DisplayName="Order No." Type="Text" Required="FALSE" Group="Custom Site Columns" Description="Order Number for this order"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" DisplayName="Order Description"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" DisplayName="Order Description"></FieldRef>
+          <FieldRef Name="CustomerNameLookup" />
+          <FieldRef Name="OrderNumber" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

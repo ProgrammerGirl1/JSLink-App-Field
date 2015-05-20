@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field
+       ID="{5a67fdcf-7cb5-4983-92df-c47828479edf}"
+       Name="CustomerNameLookup"
+       DisplayName="Customer Name"
+       Type="Text"
+       Required="TRUE"
+       Group="Custom Site Columns"
+       Description="The customer this relates to"
+       JSLink="~site/Scripts/lookupfieldcustomer.js">
+    <Validation Message="Please select a customer"></Validation>
+  </Field>
+  <Field
+    ID="{252ff704-f04c-44cc-a5b4-c2f2c4324841}"
+    Name="OrderNumber"
+    DisplayName="Order No."
+    Type="Text"
+    Required="FALSE"
+    Group="Custom Site Columns"
+    Description="Order Number for this order">
+  </Field>
+</Elements>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1fef6809-9f4f-411a-ba26-ee2725c321df" solutionId="1fef6809-9f4f-411a-ba26-ee2725c321df" resetWebServer="false" sharePointProductVersion="15.0" name="JSLink_App_Field" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="69f5df41-be27-49be-b8ca-fac3b80b6ee2" />
+    <featureReference itemId="81180a34-a60b-4f99-af03-16867b7da1b0" />
+  </features>
+</package>

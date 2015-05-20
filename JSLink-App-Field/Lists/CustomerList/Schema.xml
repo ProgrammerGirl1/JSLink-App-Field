@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Customers" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Customers" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" Type="10100">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100126CDB91447B4E7AAF77BDC76D88889D" Name="Customer" Group="Custom Content Types" Description="Information about customer" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{6cc7b2df-d846-4627-b2cb-a3ffdeabe59c}" DisplayName="Customer Name" Required="TRUE" Name="CustomerName" />
+          <FieldRef ID="{e03c1e86-3e36-4683-9d55-eb9a6c0b9dfe}" DisplayName="Customer Comments" Required="FALSE" Description="Any comments for this customer" Name="CustomerComments" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Account No." Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field ID="{6cc7b2df-d846-4627-b2cb-a3ffdeabe59c}" Name="CustomerName" DisplayName="Customer Name" Type="Text" Required="TRUE" Group="Custom Site Columns">
+        <Validation Message="Please enter a customer name"></Validation>
+      </Field>
+      <Field ID="{e03c1e86-3e36-4683-9d55-eb9a6c0b9dfe}" Name="CustomerComments" DisplayName="Customer Comments" Type="Note" Required="FALSE" Group="Custom Site Columns" Description="Any comments for this customer"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" DisplayName="Order No."></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" DisplayName="Account No."></FieldRef>
+          <FieldRef Name="CustomerName" />
+          <FieldRef Name="CustomerComments" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

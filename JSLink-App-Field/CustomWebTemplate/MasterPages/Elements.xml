@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="MasterPages" List="116" Url="_catalogs/masterpage">
+    <File Path="MasterPages\customapp.master" Url="customapp.master" ReplaceContent="TRUE" Type="GhostableInLibrary" Level="Published">
+      <Property Name="UIVersion" Value="15"></Property>
+      <Property Name="MasterPageDescription" Value="Custom App Master Page"></Property>
+    </File>
+  </Module>
+</Elements>

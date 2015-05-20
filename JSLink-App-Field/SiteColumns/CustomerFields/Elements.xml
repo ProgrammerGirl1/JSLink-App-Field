@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field
+       ID="{6cc7b2df-d846-4627-b2cb-a3ffdeabe59c}"
+       Name="CustomerName"
+       DisplayName="Customer Name"
+       Type="Text"
+       Required="TRUE"
+       Group="Custom Site Columns">
+    <Validation Message="Please enter a customer name"></Validation>
+  </Field>
+  <Field
+       ID="{e03c1e86-3e36-4683-9d55-eb9a6c0b9dfe}"
+       Name="CustomerComments"
+       DisplayName="Customer Comments"
+       Type="Note"
+       Required="FALSE"
+       Group="Custom Site Columns"
+       Description="Any comments for this customer">
+  </Field>
+</Elements>

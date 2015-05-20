@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100BDE22685379A4A9E9E1FCAF1F785B6F7" Name="CustomerOrders" Group="Custom Content Types" Description="Information about customer orders" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{5a67fdcf-7cb5-4983-92df-c47828479edf}" DisplayName="Customer Name" Required="TRUE" Description="The customer this relates to" Name="CustomerNameLookup" />
+      <FieldRef ID="{252ff704-f04c-44cc-a5b4-c2f2c4324841}" DisplayName="Order No." Required="FALSE" Description="Order Number for this order" Name="OrderNumber" />
+    </FieldRefs>
+  </ContentType>
+</Elements>
